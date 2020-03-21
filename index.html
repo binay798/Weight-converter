@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        
+
+    </style>
+</head>
+<body class="bg-dark">
+    <div class=" text-center text-white"><h1>Weight Converter</h1></div>
+    <div class="container ">
+        <div class="row justify-content-center">
+            <div class="col-6 text-center">
+                <form action="" class="form-group text-center">    
+                    <input type="number" class="form-control w-100 inp">
+                </form>
+            </div>
+        </div>
+        <div class="row result text-white justify-content-center">
+            <div class="col-12  mb-4 w-50">
+                <div class="card  bg-primary">
+                    <div class="card-body">
+                        <h2 class="card-title">Grams</h2>
+                        <div class="card-text gram"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12  mb-4">
+                <div class="card  bg-success">
+                    <div class="card-body">
+                        <h2 class="card-title">Pounds</h2>
+                        <div class="card-text pound"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12  mb-4">
+                <div class="card  bg-info">
+                    <div class="card-body ">
+                        <h2 class="card-title">Ounces</h2>
+                        <div class="card-text ounce"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <script>
+        document.querySelector('.result').style.visibility = 'hidden';
+        document.querySelector('.inp').addEventListener('input',function(e){
+            document.querySelector('.result').style.visibility = 'visible';
+            let inp = e.target.value;
+            document.querySelector('.gram').innerHTML = inp*1000+" g";
+            document.querySelector('.pound').innerHTML = inp*2.204+" lbs";
+            document.querySelector('.ounce').innerHTML = inp*35.27+" oz";
+            console.log(inp);
+
+        })
+    </script>
+</body>
+</html>
